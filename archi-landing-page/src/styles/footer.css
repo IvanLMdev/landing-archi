@@ -1,0 +1,46 @@
+.footer{
+    margin-top: 6rem;
+    border-top: solid 0.1px #fff;
+    width: 100%;
+    color: aliceblue;
+    background-color: #0f0f0f;
+}
+.ul-contact{
+    list-style: none;
+    padding: 1rem 0 1rem 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ul-contact li a{
+    text-decoration-line: none;
+    color: aliceblue;
+    display: flex;
+    align-content: center;
+    gap: 0.4rem;
+}
+.copy{
+    width: 100%;
+    background-color: #817b7b;
+    font-size: 0.7rem;
+}
+/*Responsive*/
+@media(width < 860px){
+    .ul-contact{
+        font-size: medium;
+    }
+    .copy{
+        font-size: 0.5rem;
+        padding: 0.1rem;
+    }
+}
+@media(width < 470px){
+    .ul-contact{
+        font-size: small;
+    }
+    .copy{
+        font-size: 0.4rem;
+        padding: 0.1rem;
+    }
+}

@@ -1,0 +1,27 @@
+.wsp2{
+    position: fixed;
+    top: 80%;
+    right: 2%;
+    border-radius: 100px;
+    /* padding: 0.5rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .wsp2 *{
+   font-size: 3rem;
+ }
+ @media(hover){
+   .wsp2:hover{
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 20px 0 #62db62;
+   }
+ }
+ /*resposive*/
+@media(width < 770px){
+   .wsp2 *{
+      font-size: 2rem;
+   }
+}
+
+
