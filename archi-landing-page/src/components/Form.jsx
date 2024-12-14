@@ -88,7 +88,7 @@ const Form = () => {
             Enviar
           </button>
         </div>
-        <input type="hidden" name="_next" value={"http://IvanLMdev.github.io/landing-archi"} />
+        <input type="hidden" name="_next" value={"https://IvanLMdev.github.io/landing-archi"} />
         <input type="hidden" name="_captcha" value={false} />
       </form>
     </div>
