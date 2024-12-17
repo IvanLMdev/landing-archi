@@ -30,12 +30,16 @@
 }
 
 .img-serv{
-    width: 430px;
+    width: 260px;
     height: 240px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 .img-serv-2{
     width: 260px;
     height: 240px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 .line-serv{
     margin: 3rem 0 3rem 0;
@@ -59,13 +63,11 @@
     }
 
     .img-serv{
-        width: 230px;
-        height: 100px;
+       margin-bottom: 1.5rem;
     }
     .img-serv-2{
-        width: 170px;
-        height: 100px;
-    }
+      margin-top: 1.5rem;
+    } 
     .section-1{
         width: 80%;
         flex-direction: column;
