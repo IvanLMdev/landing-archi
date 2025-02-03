@@ -1,6 +1,8 @@
 import "../styles/card-service.css";
 import imgAds from "../../public/img/Google-AdWords-logo.png";
 import desWebImg from "../../public/img/we-believe.png";
+import Dropdown from "./other-comp/Dropdown";
+
 function CardService() {
   return (
     <section className="service-cont">
@@ -27,6 +29,7 @@ function CardService() {
             estéticos, rápidos y con un lenguaje persuasivo que conecta con tus
             potenciales clientes y los convierte en oportunidades reales
           </p>
+        <Dropdown/>
         </article>
         <img
           src={desWebImg}

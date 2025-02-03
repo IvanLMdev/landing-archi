@@ -2,11 +2,9 @@ import "../styles/form.css";
 
 const Form = () => {
 
-
   const onSubmit = () => {
     alert('Se enviara este correo...')
   };
-
 
   return (
     <div className="content-form">
@@ -79,11 +77,8 @@ const Form = () => {
               name="message"
               placeholder="Dejá tu mensaje"
               required
-              
             />
-            
           </section>
-
           <button className="sudmit btn" type="sudmit">
             Enviar
           </button>
