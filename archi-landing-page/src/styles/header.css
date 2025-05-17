@@ -1,14 +1,20 @@
-.header-cont {
-    display: flex;
-    align-items: center;
+.stiky-cont{
     width: 100%;
     min-height: 100vh;
+    position: relative;
     background-image: url("../../public/img/Original.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+.header-cont {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+}
 .header{
+    margin-top: 15vh;
     width: 40%;
     padding: 1rem 1rem 1rem 4rem;
     color: aliceblue;
@@ -18,7 +24,7 @@
     font-weight: 200;
 }
 .header-tittle-d{
-    font-size: small;
+    font-size: medium;
     padding-top: 1.2rem;
     color:rgb(110, 255, 165);
 }
@@ -39,8 +45,10 @@
         font-size: 1.8rem;
     }
 }
-@media(width < 500px){
-    
+@media(width < 790px){
+    .header{
+        margin-top: 30vh;
+    }
 }
 
 

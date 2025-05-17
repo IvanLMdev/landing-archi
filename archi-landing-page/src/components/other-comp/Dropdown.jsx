@@ -1,43 +1,48 @@
+import ItemDropdown from "./ItemDropdown";
 import { IoIosArrowDropdown } from "react-icons/io";
-import { IoIosArrowDropup } from "react-icons/io";
+import { links_info as info } from "../../utilities/mini_nav";
 import { useState } from "react";
 import "../../styles/dropdown.css";
 
 const Dropdown = () => {
   const [dropdown, setDropdowm] = useState({
     value: false,
-    clase: "hidden-drop",
+    clase: "",
   });
 
-  const ClickDropdawn = () => {
+  const ClickDropdown = (e) => {
     dropdown.value
-      ? setDropdowm({ value: false, clase: "hidden-drop" })
+      ? setDropdowm({ value: false, clase: "" })
       : setDropdowm({ value: true, clase: "show-drop" });
   };
 
   return (
-    <div className="dropdown-cont">
-      <hr />
-      <div className="dropdown-icon">
-        <i className="arrow-icon" onClick={ClickDropdawn}>
-          {dropdown.value ? (
-              <IoIosArrowDropup color="rgb(109, 36, 177)" size={"1.3rem"} />
-            ) : (
-              <IoIosArrowDropdown color="rgb(110, 255, 165)" size={"1.3rem"} />
-          )}
-        </i>
-        <p className="drop-paran">Ver los diseños web</p>
-      </div>
-      <div className="list-cont">
-        <ul className={`list-webs-link ${dropdown.clase}`}>
-          <a href="#">template-1</a>
-          <a href="#">template-2</a>
-          <a href="#">template-3</a>
-          <a href="#">template-4</a>
-          <a href="#">template-5</a>
-        </ul>
-      </div>
-    </div>
+    <>
+      <button className="dropdown-cont --flexcenter" onClick={ClickDropdown}>
+        <div className="dropdown-icon">
+          <p className="drop-paran">Ver los sitios con 75% off</p>
+          <i
+            className={`${
+              dropdown.value ? "rotate-i" : ""
+            } arrow-icon --flex-center`}
+          >
+            <IoIosArrowDropdown color="rgb(109, 36, 177)" size={"1.3rem"} />
+          </i>
+        </div>
+      </button>
+
+      <nav className={`list-cont ${dropdown.clase}`}>
+        {dropdown.value ? (
+          <ul className={`list-webs-link`}>
+            {info.map((x) => (
+              <ItemDropdown key={x.key} href={x.to} src={x.src} />
+            ))}
+          </ul>
+        ) : (
+          <></>
+        )}
+      </nav>
+    </>
   );
 };
 

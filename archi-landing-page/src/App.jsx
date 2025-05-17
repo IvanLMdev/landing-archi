@@ -1,18 +1,17 @@
-import MainCont  from './components/MainCont'
-import Footer from './components/Footer'
-import Wsp2 from './components/other-comp/Wsp-icon-fixed'
-import NavBar from './components/NavBar'
-import './styles/app-styles.css'
+import { Routes, BrowserRouter,Route } from "react-router-dom";
+import "./styles/app-styles.css";
+import Home from "./Home";
+import PreguntasFrecuentes from "./components/PreguntasFrecuentes";
 
 const App = () => {
   return (
-    <div className='app'>
-        <NavBar/>
-        <MainCont/>
-        <Footer/>
-        <Wsp2/>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="Preguntas" element={<PreguntasFrecuentes/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;

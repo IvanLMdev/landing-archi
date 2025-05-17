@@ -1,15 +1,15 @@
 import '../styles/main-cont.css'
 import Header from './Header'
-import CardService from './CardService'
-import Form from './Form'
+import Service from './Service'
+import NewForm from './NewForm'
 
 
 const MainCont = () => {
   return (
     <main className='main-cont'>   
         <Header/>
-        <CardService/> 
-        <Form/>   
+        <Service/>
+        <NewForm/>
     </main>
   )
 }
